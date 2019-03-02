@@ -25,7 +25,7 @@ if(!(NORM_METHOD %in% c("min_max","znorm"))){
 #
 #	Mapping of the identifiers and the Arabidopsis thaliana proteins
 #
-meta_info=read.csv("../data/internal_id_gene_name.txt",sep="\t",header=T)
+meta_info=read.csv("data/internal_id_gene_name.txt",sep="\t",header=T)
 META=list()
 META=meta_info[,1]
 names(META)=meta_info[,2]
@@ -70,7 +70,7 @@ parse_content=function(my_opt){
 		if(NORM_METHOD=="znorm"){
 			my_sd=sd(my_v); 
 			my_mean=mean(my_v)
-                	data[ix,3:dim(data)[2]]=(data[ix,3:dim(data)[2]]-my_mean)/my_sd
+			data[ix,3:dim(data)[2]]=(data[ix,3:dim(data)[2]]-my_mean)/my_sd
 		}else if(NORM_METHOD=="min_max"){
 			my_min=min(my_v); 
 			my_max=max(my_v)

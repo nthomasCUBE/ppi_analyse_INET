@@ -29,7 +29,7 @@ f_elements={}
 
 print(c_dir)
 files=os.listdir(c_dir)
-os.system("mkdir "+c_dir+"/PARSED")
+#os.system("mkdir "+c_dir+"/PARSED")
 fw=file(c_dir+"/1_restructure_content.txt","w")
 fw2=file(c_dir+"/1_restructure_content_ignored.txt","w")
 for files_ in files:
